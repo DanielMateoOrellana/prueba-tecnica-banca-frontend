@@ -1,0 +1,76 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 2rem;
+  background: #1f3a93;
+  color: #fff;
+
+  h1 {
+    margin: 0;
+    font-size: 1.4rem;
+  }
+
+  nav {
+    display: flex;
+    gap: 1rem;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      padding: 0.4rem 0.8rem;
+      border-radius: 4px;
+
+      &.active,
+      &:hover {
+        background: rgba(255, 255, 255, 0.18);
+      }
+    }
+  }
+}
+
+.content {
+  flex: 1;
+  padding: 2rem;
+  background: #f4f6fb;
+}
+
+.toasts {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  z-index: 1000;
+
+  .toast {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    min-width: 280px;
+    padding: 0.6rem 0.8rem;
+    border-radius: 4px;
+    color: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+
+    button {
+      background: transparent;
+      color: inherit;
+      border: 0;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    &.success { background: #28a745; }
+    &.error   { background: #d9534f; }
+    &.info    { background: #17a2b8; }
+  }
+}

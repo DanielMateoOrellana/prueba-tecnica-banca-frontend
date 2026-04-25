@@ -1,0 +1,22 @@
+<header class="topbar">
+  <h1>Banca</h1>
+  <nav>
+    <a routerLink="/clientes" routerLinkActive="active">Clientes</a>
+    <a routerLink="/cuentas" routerLinkActive="active">Cuentas</a>
+    <a routerLink="/movimientos" routerLinkActive="active">Movimientos</a>
+    <a routerLink="/reportes" routerLinkActive="active">Reportes</a>
+  </nav>
+</header>
+
+<main class="content">
+  <router-outlet></router-outlet>
+</main>
+
+<div class="toasts">
+  @for (n of notifications.notifications(); track n.id) {
+    <div class="toast" [class.success]="n.type === 'success'" [class.error]="n.type === 'error'" [class.info]="n.type === 'info'">
+      <span>{{ n.message }}</span>
+      <button type="button" (click)="notifications.dismiss(n.id)">x</button>
+    </div>
+  }
+</div>
