@@ -22,7 +22,7 @@ npm install
 npm start          # equivalente a 'ng serve' en http://localhost:4200
 ```
 
-Asegurate de que el backend este corriendo en `http://localhost:8080` (ajustable en `src/environments/environment.ts`).
+Asegurate de que el backend este corriendo en `http://localhost:8081` (ajustable en `src/environments/environment.ts`).
 
 ## Build / tests
 
